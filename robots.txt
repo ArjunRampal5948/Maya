@@ -1,0 +1,44 @@
+# robots.txt
+# Crawling rules for production environment
+
+User-agent: *
+Disallow: /admin
+Disallow: /login
+Disallow: /api/private
+Disallow: /api/internal
+Disallow: /backup
+Disallow: /backup_old
+Disallow: /tmp
+Disallow: /test
+Disallow: /staging
+Disallow: /dev
+Disallow: /internal
+Disallow: /logs
+Disallow: /config
+Disallow: /secrets
+Disallow: /vault
+Disallow: /private
+
+# Legacy endpoints (do not index)
+Disallow: /v1/internal
+Disallow: /v2/internal
+Disallow: /v3/internal
+
+# Assets
+Allow: /assets
+Allow: /static
+Allow: /images
+Allow: /css
+Allow: /js
+
+# Maintenance paths
+Disallow: /maintenance
+Disallow: /maintenance-old
+Disallow: /maintenance-2021
+Disallow: /maintenance-2022
+
+# Internal note:
+# Robots don’t see braces, humans do.
+
+# Archived endpoint (very sensitive)
+Disallow: T3BlcmF0aW9uIE1heWEgd2lsbCBiZSBjb25kdWN0ZWQgb24gdGhlIDMxc3QgSmFuIC0gMXN0IEZlYi4gSW5kaWEgd2lsbCBmZWVsIG91ciB3cmF0aC4gZmxhZ3trcm9kaGl0fQ==
